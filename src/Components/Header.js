@@ -43,13 +43,9 @@ export default class Header extends Component {
                         <Button variant="outline-info" >Search</Button>
                      </Form>
                 </Navbar.Collapse>
-               
-                    
-
-
-            </Container>
+              </Container>
         </Navbar>
-        <Router>
+        <Router> 
             <Routes>
 
               <Route exact path="/" element={<Home/>}/>
@@ -60,9 +56,11 @@ export default class Header extends Component {
 
             </Routes>
         </Router>
+
+
     </>
     
-    )
+    );
   }
 }
 
