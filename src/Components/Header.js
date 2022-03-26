@@ -1,6 +1,13 @@
 import React, { Component } from 'react';
 import { Navbar,Nav, FormControl, Container, Form, Button } from 'react-bootstrap';
 import logo from './logo192.png';
+import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
+
+import Home from '../Pages/Home';
+import About from '../Pages/About';
+import Contacts from '../Pages/Contacts';
+import Blog from '../Pages/Blog';
+
 
 export default class Header extends Component {
   render() {
@@ -42,6 +49,17 @@ export default class Header extends Component {
 
             </Container>
         </Navbar>
+        <Router>
+            <Routes>
+
+              <Route exact path="/" element={<Home/>}/>
+              <Route exact path="/about" element={<About/>}/>
+              <Route exact path="/contacts" element={<Contacts/>}/>
+              <Route exact path="/blog" element={<Blog/>}/>
+            
+
+            </Routes>
+        </Router>
     </>
     
     )
